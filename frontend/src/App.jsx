@@ -9,8 +9,8 @@ import Orders from './pages/sufiyan/Orders';
 
 function App() {
   return (
-  <HStack border={"1px solid"}>
-    <Box className="App">
+  <HStack w={"100%"}  border={"1px solid"}>
+    <Box w={"100%"} className="App">
       <Navbar/>
       <AllRoutes/>
     </Box>

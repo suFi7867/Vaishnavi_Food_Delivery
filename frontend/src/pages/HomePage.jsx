@@ -1,10 +1,11 @@
+import { HStack, Text } from '@chakra-ui/react'
 import React from 'react'
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>HOME</h1>
-    </div>
+    <HStack w="full">
+      <Text>HOME</Text>
+    </HStack>
   )
 }
 

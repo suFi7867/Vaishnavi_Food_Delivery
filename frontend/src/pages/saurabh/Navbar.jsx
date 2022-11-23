@@ -52,7 +52,7 @@ import {
       const { colorMode, toggleColorMode } = useColorMode()
       
       return (
-        <Stack direction={'row'} spacing={10}>
+        <Stack direction={'row'} spacing={10} w="100%" >
           {NAV_ITEMS.map((navItem) => (
             <VStack justifyContent={"center"} alignContent={"center"}  key={navItem.label}>
               <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -95,7 +95,7 @@ import {
     
     const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       return (
-        <Link
+        <Link 
           href={href}
           role={'group'}
           display={'block'}
@@ -144,7 +144,7 @@ import {
       const { isOpen, onToggle } = useDisclosure();
     
       return (
-        <Stack spacing={4} onClick={children && onToggle}>
+        <Stack  spacing={4} onClick={children && onToggle}>
           <Flex
             py={2}
             as={Link}
@@ -228,7 +228,7 @@ import {
     ];
     return (
      <ChakraProvider>
-      <Box >
+      <Box border={"2px solid red"} w="full"minW={"800px"}>
         <Flex 
           bg={useColorModeValue('#ef7f1a', 'gray.800')}
           color={useColorModeValue('whiteAlpha.900', 'white')}
@@ -257,7 +257,7 @@ import {
               // textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-              <Image p={2}  color='white' h={{base:"50px" , sm:"60px" , md:"70px"}}  src={logo}/>
+              <Image p={2}  color='white' h={{base:"70px" ,  md:"70px"}}  src={logo}/>
             </Box>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
