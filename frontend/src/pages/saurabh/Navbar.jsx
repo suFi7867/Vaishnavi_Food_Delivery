@@ -228,12 +228,12 @@ import {
     ];
     return (
      <ChakraProvider>
-      <Box border={"2px solid red"} w="full"minW={"800px"}>
+      <Box  w="full"  >
         <Flex 
           bg={useColorModeValue('#ef7f1a', 'gray.800')}
           color={useColorModeValue('whiteAlpha.900', 'white')}
           minH={'40px'}
-       
+          p={{base:"0px 10px", md:"0px 50px"}}
           borderBottom={1}
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
@@ -252,12 +252,12 @@ import {
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-            <Box
-            bg={"white"} h="100%"
+            <Box borderRadius={{base:10, md:"0"}}
+            bg={"white"} h={{base:"90%", md:"100%"}}
               // textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-              <Image p={2}  color='white' h={{base:"70px" ,  md:"70px"}}  src={logo}/>
+              <Image p={2} color='white' h={{base:"70px" ,  md:"70px"}} minW="150px" src={logo}/>
             </Box>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -271,29 +271,30 @@ import {
             direction={'row'}
             spacing={6}>
            {  name? <> <Text ml={3} fontSize={'0.8rem'} fontWeight={"semibold"} textAlign={'center'} color={'white'}>{name}</Text> <Button onClick={handleclear} colorScheme={'red'} size={'xs'}>Logout</Button></> : <>
-            <Button ml={{base:"10px"}}
-             padding='2px 10px'
-              color={'white'}
-              bg={'red.500'}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'/login'} 
-              onClick={()=>Navigate('/login')}
-              >
-              Sign In
-            </Button>
             <Button
-              display={{ base: 'inline-flex', md: 'inline-flex' }}
+              display={{ base: 'none', md: 'flex' }}
               fontSize={'sm'}
+             
               fontWeight={400}
-              color={'white'}
-              bg={'red.500'}
+            
+              colorScheme="facebook"
+            
               href={'#'}
               _hover={{
                 bg: 'red.300',
               }}>
-              Sign Up
+              Sign In
+            </Button>
+            <Button
+              display={{ base: 'flex', md: 'none' }}
+              fontSize={'sm'}
+              fontWeight={400}
+              colorScheme="facebook"
+              href={'#'}
+              _hover={{
+                bg: 'red.300',
+              }}>
+              Order Now
             </Button> </>}
         
           </Stack>
