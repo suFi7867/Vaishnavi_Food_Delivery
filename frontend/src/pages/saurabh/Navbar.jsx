@@ -19,6 +19,7 @@ import {
     HStack,
     Input,
     useColorMode,
+    VStack,
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -29,7 +30,7 @@ import {
   
   import React from 'react'
   
-  //import logo from './images/logo.jpg'
+ import logo from './assets/logo.png'
   import { useEffect } from 'react';
   import { useNavigate } from 'react-router-dom';
    
@@ -51,9 +52,9 @@ import {
       const { colorMode, toggleColorMode } = useColorMode()
       
       return (
-        <Stack  direction={'row'} spacing={4}>
+        <Stack direction={'row'} spacing={10}>
           {NAV_ITEMS.map((navItem) => (
-            <Box key={navItem.label}>
+            <VStack justifyContent={"center"} alignContent={"center"}  key={navItem.label}>
               <Popover trigger={'hover'} placement={'bottom-start'}>
                 <PopoverTrigger>
                   <Link
@@ -61,10 +62,10 @@ import {
                     href={navItem.href ?? '#'}
                     fontSize={'sm'}
                     fontWeight={500}
-                    color={'whiteAlpha.800'}
+                    color={'white'}
                     _hover={{
                       textDecoration: 'none',
-                      color: 'whiteAlpha.800',
+                      color: 'blackAlpha.800',
                     }}>
                     {navItem.label}
                   </Link>
@@ -86,7 +87,7 @@ import {
                   </PopoverContent>
                 )}
               </Popover>
-            </Box>
+            </VStack>
           ))}
         </Stack>
       );
@@ -229,11 +230,10 @@ import {
      <ChakraProvider>
       <Box >
         <Flex 
-          bg={useColorModeValue('blackAlpha', 'gray.800')}
-          color={useColorModeValue('gray.600', 'white')}
+          bg={useColorModeValue('#ef7f1a', 'gray.800')}
+          color={useColorModeValue('whiteAlpha.900', 'white')}
           minH={'40px'}
-          py={{ base: 2 }}
-          px={{ base: 4 }}
+       
           borderBottom={1}
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
@@ -252,18 +252,19 @@ import {
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-            <Text
+            <Box
+            bg={"white"} h="100%"
               // textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-              <Image p={0}  color='white' w={{base:"50px" , sm:"60px" , md:"80px"}}  src={logo}/>
-            </Text>
+              <Image p={2}  color='white' h={{base:"50px" , sm:"60px" , md:"70px"}}  src={logo}/>
+            </Box>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
             </Flex>
           </Flex>
-           <HStack> <Input/> </HStack>
+        
           <Stack
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}

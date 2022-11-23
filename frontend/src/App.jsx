@@ -1,16 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './pages/saurabh/Navbar';
+import AllRoutes from './routes/AllRoutes';
+import { Box, HStack, Stack } from '@chakra-ui/react';
+import Orders from './pages/sufiyan/Orders';
 
 
 
 function App() {
   return (
-
-    
-    <div className="App">
+  <HStack border={"1px solid"}>
+    <Box className="App">
       <Navbar/>
-    </div>
+      <AllRoutes/>
+    </Box>
+
+    <Orders/>
+ 
+ 
+  </HStack>
+    
+  
   );
 }
 

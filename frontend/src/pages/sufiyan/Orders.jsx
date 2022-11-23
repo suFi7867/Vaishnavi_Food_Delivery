@@ -1,10 +1,11 @@
+import { VStack } from '@chakra-ui/react'
 import React from 'react'
 
 const Orders = () => {
   return (
-    <div>
+    <VStack w={"500px"} border="1px solid" >
       <h1>Orders</h1>
-    </div>
+    </VStack>
   )
 }
 
