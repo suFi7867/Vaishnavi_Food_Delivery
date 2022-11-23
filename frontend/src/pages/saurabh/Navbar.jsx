@@ -228,7 +228,7 @@ import {
     ];
     return (
      <ChakraProvider>
-      <Box  w="full"  >
+      <Box  w="full" position={"sticky"} top="0" zIndex={999}>
         <Flex 
           bg={useColorModeValue('#ef7f1a', 'gray.800')}
           color={useColorModeValue('whiteAlpha.900', 'white')}

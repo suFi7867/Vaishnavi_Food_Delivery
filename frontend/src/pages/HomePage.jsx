@@ -1,11 +1,16 @@
-import { HStack, Text } from '@chakra-ui/react'
+import { HStack, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
+import CallToActionWithIllustration from './saurabh/xxx'
 
 const HomePage = () => {
   return (
-    <HStack w="full">
+    <VStack w="full">
       <Text>HOME</Text>
-    </HStack>
+      <CallToActionWithIllustration/>
+      <CallToActionWithIllustration/>
+      <CallToActionWithIllustration/>
+  
+    </VStack>
   )
 }
 
