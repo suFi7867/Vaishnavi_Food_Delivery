@@ -6,10 +6,7 @@ const HomePage = () => {
   return (
     <VStack w="full">
       <Text>HOME</Text>
-      <CallToActionWithIllustration/>
-      <CallToActionWithIllustration/>
-      <CallToActionWithIllustration/>
-  
+   
     </VStack>
   )
 }

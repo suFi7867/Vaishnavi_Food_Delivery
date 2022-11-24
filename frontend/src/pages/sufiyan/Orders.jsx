@@ -6,9 +6,7 @@ const Orders = () => {
   return (
     <Box position={"sticky"} top="0"  h="100vh" display={{base:"none", md:"block"}} w={"500px"} border="1px solid" >
       <h1>Orders</h1>
-      <CallToActionWithIllustration/>
-      <CallToActionWithIllustration/>
-      <CallToActionWithIllustration/>
+     
     </Box>
   )
 }

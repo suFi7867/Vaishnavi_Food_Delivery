@@ -55,38 +55,22 @@ import {
         <Stack direction={'row'} spacing={10} w="100%" >
           {NAV_ITEMS.map((navItem) => (
             <VStack justifyContent={"center"} alignContent={"center"}  key={navItem.label}>
-              <Popover trigger={'hover'} placement={'bottom-start'}>
-                <PopoverTrigger>
+            
                   <Link
                     p={2}
                     href={navItem.href ?? '#'}
-                    fontSize={'sm'}
+                    fontSize={'lg'}
                     fontWeight={500}
-                    color={'white'}
+                    color={navItem.label == "Order Now" ?  "red.500" : "black" }
                     _hover={{
                       textDecoration: 'none',
                       color: 'blackAlpha.800',
                     }}>
-                    {navItem.label}
+                    {navItem.label }
                   </Link>
-                </PopoverTrigger>
+             
     
-                {navItem.children && (
-                  <PopoverContent
-                    border={0}
-                    boxShadow={'xl'}
-                    bg={popoverContentBgColor}
-                    p={4}
-                    rounded={'xl'}
-                    minW={'sm'}>
-                    <Stack>
-                      {navItem.children.map((child) => (
-                        <DesktopSubNav key={child.label} {...child} />
-                      ))}
-                    </Stack>
-                  </PopoverContent>
-                )}
-              </Popover>
+              
             </VStack>
           ))}
         </Stack>
@@ -199,38 +183,29 @@ import {
     
     const NAV_ITEMS: Array<NavItem> = [
       {
-        label: 'Categories',
-        children: [
-          {
-            label: 'Airpdopes True Wireless',
-            subLabel: 'Trending Design to inspire you',
-            href: '#',
-          },
-          {
-            label: 'SmartWatches',
-            subLabel: 'Best Designes',
-            href: '#',
-          },
-        ],
-      },
-      {
-        label: 'Daily Deals',
+        label: 'Home',
         href: '#',
       },
       {
-        label: 'Shop',
+        label: 'Plans',
         href: '#',
       },
       {
-        label: 'More',
+        label: 'Order Now',
         href: '#',
       },
+
+      {
+        label: 'Contact Us',
+        href: '#',
+      },
+    
     ];
     return (
      <ChakraProvider>
       <Box  w="full" position={"sticky"} top="0" zIndex={999}>
         <Flex 
-          bg={useColorModeValue('#ef7f1a', 'gray.800')}
+          bg={useColorModeValue('gray.100', 'gray.800')}
           color={useColorModeValue('whiteAlpha.900', 'white')}
           minH={'40px'}
           p={{base:"0px 10px", md:"0px 50px"}}
@@ -253,11 +228,11 @@ import {
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
             <Box borderRadius={{base:10, md:"0"}}
-            bg={"white"} h={{base:"90%", md:"100%"}}
+           h={{base:"90%", md:"100%"}}
               // textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-              <Image p={2} color='white' h={{base:"70px" ,  md:"70px"}} minW="150px" src={logo}/>
+              <Image p={1} color='white' h={{base:"70px" ,  md:"70px"}} minW="150px" src={logo}/>
             </Box>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
