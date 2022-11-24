@@ -205,7 +205,7 @@ import {
      <ChakraProvider>
       <Box  w="full" position={"sticky"} top="0" zIndex={999}>
         <Flex 
-          bg={useColorModeValue('gray.100', 'gray.800')}
+          bg={useColorModeValue('linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(237,242,247,1) 100%)', 'gray.800')}
           color={useColorModeValue('whiteAlpha.900', 'white')}
           minH={'40px'}
           p={{base:"0px 10px", md:"0px 50px"}}
@@ -220,9 +220,10 @@ import {
             <IconButton
               onClick={onToggle}
               icon={
-                isOpen ? <CloseIcon color={"white"} w={8} h={8} /> : <HamburgerIcon color={"white"} w={8} h={8} />
+                isOpen ? <CloseIcon color={"#385898"} w={4} h={4} /> : <HamburgerIcon color={"#385898"}   w={7} h={7}  />
               }
               variant={'ghost'}
+              
               aria-label={'Toggle Navigation'}
             />
           </Flex>
@@ -249,14 +250,14 @@ import {
             <Button
               display={{ base: 'none', md: 'flex' }}
               fontSize={'sm'}
-             
+              borderRadius="full"
               fontWeight={400}
             
               colorScheme="facebook"
-            
+             
               href={'#'}
               _hover={{
-                bg: 'red.300',
+                bg: 'facebook.300',
               }}>
               Sign In
             </Button>
@@ -264,11 +265,13 @@ import {
               display={{ base: 'flex', md: 'none' }}
               fontSize={'sm'}
               fontWeight={400}
-              colorScheme="facebook"
+              borderRadius="full"
+              colorScheme="orange"
               href={'#'}
               _hover={{
-                bg: 'red.300',
-              }}>
+                bg: 'orange.300',
+              }}
+             >
               Order Now
             </Button> </>}
         
