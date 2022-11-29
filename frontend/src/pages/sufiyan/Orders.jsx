@@ -15,9 +15,9 @@ const Orders = () => {
 
   if(True){
     return (
-      <VStack  h="100vh" display={{base:"none", md:"block"}} w={"500px"} justifyContent="center" alignContent={"center"}  >
+      <VStack bgColor={"blackAlpha.500"} borderLeft={"2px solid white"}  top="0"   position={"sticky"} h="100vh" display={{base:"none", md:"block"}} w={"500px"} justifyContent="center" alignContent={"center"}  >
 
-<Image   h="100vh" opacity={"80%"}   filter= "blur(0.3rem)" borderRadius={10}  fit="cover"  src="https://media.istockphoto.com/id/666204804/photo/indian-vegetarian-office-or-school-lunch-box-or-tiffin-with-north-indian-or-maharashtrian.jpg?s=612x612&w=0&k=20&c=dtgiRE1ZNYBwvTkublRCYlt4QqlbAp0gOomwhXedOnQ=" />
+<Image   h="100vh" opacity={"80%"}   filter= "blur(0.2rem)" borderRadius={10}  fit="cover"  src="https://media.istockphoto.com/id/666204804/photo/indian-vegetarian-office-or-school-lunch-box-or-tiffin-with-north-indian-or-maharashtrian.jpg?s=612x612&w=0&k=20&c=dtgiRE1ZNYBwvTkublRCYlt4QqlbAp0gOomwhXedOnQ=" />
       
 <Button shadow={"dark-lg"} colorScheme="orange"  borderRadius={100} h="120px" w="120px" fontWeight={"light"} fontSize="xl" onClick={()=>setTrue(false)} position={"absolute"} top="45%" right="120px" filter="none" display={"block"} > Order <br /> Now</Button>
         
@@ -30,7 +30,7 @@ const Orders = () => {
 
 
   return (
-    <VStack position={"sticky"} top="0"  bg="#f6f9fb" h="100vh" display={{base:"none", md:"block"}} w={"500px"}  >
+    <VStack border={'1px solid'} position={"sticky"} top="0"  bg="#f6f9fb" h="100vh" display={{base:"none", md:"block"}} w={"500px"}  >
     
     <VStack alignItems={"flex-start"} p={5} border="1px solid">
       <Text fontSize={"2xl"} alignSelf={"left"} >My Orders</Text>
