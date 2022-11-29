@@ -188,7 +188,7 @@ const Hero = () => {
   <Box  spacing={3}> <Image w={{base:"70%",md:"80%"}} margin={'auto'} mb={2}  src={easycancel}/>
   <Text fontSize={{base:"12px" ,sm:"16px"}}>Easy Cancellation</Text>
   </Box>
-    {/* <address></address> */}
+ 
 </SimpleGrid>
 </>
   )
